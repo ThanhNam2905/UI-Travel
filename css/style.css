@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+    --orange-color: #ffa500;
+}
+
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all 0.3s linear;
+}
+
+*::selection {
+    background-color: var(--orange-color);
+    color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+/* CSS header */
+header {
+    position: fixed;
+    top: 0px; left: 0px; right: 0px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    padding: 2rem 9%;
+}
+header .header-logo {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+header .header-logo span{
+    color: var(--orange-color);
+}
+header .navbar a {
+    font-size: 2rem;
+    color: #fff;
+    margin: 0px 0.8rem;
+}
+header .navbar a:hover {
+    color: var(--orange-color);
+}
+header .icons i {
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+header .icons i:hover {
+    color: var(--orange-color);
+}
+header form.search-bar-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 1.5rem 2rem;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+header form.search-bar-container #search-bar {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    color: #333;
+    text-transform: none;
+    font-size: 1.7rem;
+    border-radius: 0.5rem;
+}
+header form.search-bar-container label {
+    color: #fff;
+    font-size: 3rem;
+    margin-left: 1.5rem;
+    cursor: pointer;
+}
+header form.search-bar-container label:hover {
+    color: var(--orange-color);
+}
