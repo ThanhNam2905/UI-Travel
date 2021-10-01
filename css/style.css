@@ -583,8 +583,50 @@ header form.search-bar-container label:hover {
     color: var(--orange-color);
 }
 
+/* CSS Scroll to top */
+#scroll-top {
+    position: fixed;
+    top: calc(100% - 11rem);
+    right: -120%;
+    z-index: 99999;
+    padding: 1.2rem 1.6rem;
+    font-size: 3rem;
+    background: var(--orange-color);
+    border-radius: 50%;
+    color: #fff;
+    border: 0.2rem solid #fff;
+    transform: scale(0);
+    transition: 0.5s linear;
+}
+#scroll-top.active {
+    transform: scale(1);
+    cursor: pointer;
+    right: 3.5rem;
+    
+}
+#scroll-top:hover {
+    background: #fff;
+    color: var(--orange-color);
+    border: 0.2rem dashed var(--orange-color);
 
+}
 
+/* CSS Loading Page */
+#loading-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999999;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loading-page.active {
+    top: -120%;
+}
 
 /* Responsive media-queries */
 @media (max-width: 1200px) {
@@ -642,13 +684,27 @@ header form.search-bar-container label:hover {
         padding: 0px 2.5rem;
         gap: 4rem;
     }
-    
+
+    #scroll-top {
+        padding: 1rem 1.3rem;
+        font-size: 2.5rem; 
+    } 
+    #scroll-top.active {
+        right: 3rem;
+    } 
 }
-@media (max-width: 450px) {
+@media (max-width: 415px) {
     html {
         font-size: 50%;
     }
     .contact .row form .input-box input {
         width: 100%;
     }
+    #scroll-top {
+        padding: 0.8rem 1.1rem;
+        font-size: 2.3rem; 
+    } 
+    #scroll-top.active {
+        right: 2.5rem;
+    } 
 }

@@ -7,6 +7,25 @@ let closeBtn = document.querySelector('#icon-close');
 let menuBar = document.querySelector('#menu-bar');
 let navBar = document.querySelector('.navbar');
 let videoBtnList =document.querySelectorAll('.video-btn');
+let scrollTopBtn = document.querySelector("#scroll-top");
+
+// Scroll to top
+scrollTopBtn.onclick = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    })
+};
+
+// Loading Page when on load page
+function loading() {
+    document.querySelector("#loading-page").classList.add("active");
+}
+function fadeOut() {
+    setInterval(loading, 3000);
+}
+window.onload = fadeOut();
+
 
 window.onscroll = () => {
     searchBtn.classList.remove('fa-times');
@@ -14,6 +33,13 @@ window.onscroll = () => {
     menuBar.classList.remove('fa-times');
     navBar.classList.remove('active');
     loginForm.classList.remove('active');
+
+    if(scrollY > 200) {
+        scrollTopBtn.classList.add("active");
+    }
+    else {
+        scrollTopBtn.classList.remove("active");
+    }
 }
 
 menuBar.addEventListener('click', () => {
